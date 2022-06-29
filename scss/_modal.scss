@@ -1,0 +1,131 @@
+.dim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1014px;
+  width: 1920px;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 49;
+  opacity: 0;
+
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+.form-modal {
+  display: none;
+  border: 1px solid black;
+  position: relative;
+  left: 742px;
+  top: 240px;
+  width: 436px;
+  height: 414px;
+  z-index: 50;
+  background: $background-color;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  .modal-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 11px;
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 130%;
+      color: #495057;
+      margin-left: 24px;
+    }
+  }
+  .close-btn {
+    background: none;
+    border: none;
+    margin-right: 28px;
+  }
+
+  form {
+    .form-item {
+      padding: 0 24px 4px 24px;
+      label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #212529;
+      }
+      input {
+        width: 388px;
+        height: 37px;
+        border: 1px solid #adb5bd;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        outline: none;
+        padding: 0 16px;
+        &::placeholder {
+          font-family: 'Segoe UI';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          color: #adb5bd;
+        }
+      }
+      textarea {
+        font-family: 'Segoe UI';
+        width: 388px;
+        height: 48px;
+        border: 1px solid #adb5bd;
+        border-radius: 4px;
+        margin-bottom: 41px;
+        resize: none;
+        outline: none;
+        padding: 8px 16px;
+        &::placeholder {
+          font-family: 'Segoe UI';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          color: #adb5bd;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    box-shadow: inset 0px 1px 0px #dee2e6;
+    border-radius: 0px 0px 4px 4px;
+    button {
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      background: $background-color;
+      padding: 8px 16px;
+      margin-top: 12px;
+      margin-bottom: 16px;
+      &:hover {
+        border: 1px solid #1565c0;
+        background: #1565c0;
+        color: $background-color;
+      }
+    }
+    .add {
+      margin-right: 24px;
+      margin-left: 8px;
+    }
+  }
+  &.active {
+    display: block;
+  }
+}

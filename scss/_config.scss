@@ -1,0 +1,15 @@
+$primary-color: #007296;
+$highlight-color: #e66e19;
+$background-color: #fff;
+$inactive-text: #6c757d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI' !important;
+  background-color: $background-color;
+}

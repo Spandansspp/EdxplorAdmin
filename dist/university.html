@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>University Details</title>
+  </head>
+  <body>
+    <section class="left-bar">
+      <div class="logo">
+        <img src="./img/logo.png" alt="" />
+        <h1>Edxplor Management System</h1>
+      </div>
+
+      <!-- left bar navigation panel -->
+      <div class="nav">
+        <div class="nav-title">Master Data</div>
+        <!-- nav-list -->
+        <div class="nav-list">
+          <div class="nav-container active" id="navContainer">
+            <!-- nav item - academics -->
+            <div class="item active" id="item1">
+              <img
+                src="./img/academic-active.png"
+                alt=""
+                class="item-icon active"
+                id="icon1Active"
+              />
+              <img
+                src="./img/academic-inactive.png"
+                alt=""
+                class="item-icon"
+                id="icon1Inactive"
+              />
+              <div class="item-title" id="item1Title">Academic</div>
+              <img
+                src="./img/up-arrow.png"
+                alt=""
+                class="up-arrow active"
+                id="upArrow1"
+                onclick="hideSubMenu1()"
+              />
+              <img
+                src="./img/down-arrow.png"
+                alt=""
+                class="down-arrow"
+                id="downArrow1"
+                onclick="showSubMenu1()"
+              />
+            </div>
+            <div class="sub-items active" id="subItems1">
+              <div class="sub-item">Levels</div>
+              <div class="sub-item active">Universities</div>
+              <div class="sub-item">Boards</div>
+              <div class="sub-item">Faculties</div>
+              <div class="sub-item">Programs</div>
+            </div>
+
+            <!-- nav item - location -->
+            <div class="item" id="item2">
+              <img
+                src="./img/location-active.png"
+                alt=""
+                class="item-icon"
+                id="icon2Active"
+              />
+              <img
+                src="./img/location-inactive.png"
+                alt=""
+                class="item-icon active"
+                id="icon2Inactive"
+              />
+              <div class="item-title" id="item2Title">Location</div>
+              <img
+                src="./img/up-arrow.png"
+                alt=""
+                class="up-arrow"
+                id="upArrow2"
+                onclick="hideSubMenu2()"
+              />
+              <img
+                src="./img/down-arrow.png"
+                alt=""
+                class="down-arrow active"
+                id="downArrow2"
+                onclick="showSubMenu2()"
+              />
+            </div>
+            <div class="sub-items" id="subItems2">
+              <div class="sub-item">Country</div>
+              <div class="sub-item">Province</div>
+              <div class="sub-item">District</div>
+              <div class="sub-item">Local Body Type</div>
+              <div class="sub-item">Local Body</div>
+              <div class="sub-item">VDC</div>
+              <div class="sub-item">Ward Number</div>
+            </div>
+
+            <svg
+              width="225"
+              height="1"
+              viewBox="0 0 225 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="-4.37114e-08"
+                y1="0.5"
+                x2="225"
+                y2="0.49998"
+                stroke="#DEE2E6"
+              />
+            </svg>
+
+            <!-- nav item - Role Management -->
+            <div class="item" id="item3">
+              <img
+                src="./img/role-active.png"
+                alt=""
+                class="item-icon"
+                id="icon3Active"
+              />
+              <img
+                src="./img/role-inactive.png"
+                alt=""
+                class="item-icon active"
+                id="icon3Inactive"
+              />
+              <div class="item-title" id="item3Title">Role Management</div>
+              <img
+                src="./img/up-arrow.png"
+                alt=""
+                class="up-arrow"
+                id="upArrow3"
+                onclick="hideSubMenu3()"
+              />
+              <img
+                src="./img/down-arrow.png"
+                alt=""
+                class="down-arrow active"
+                id="downArrow3"
+                onclick="showSubMenu3()"
+              />
+            </div>
+            <div class="sub-items" id="subItems3">
+              <div class="sub-item">Students</div>
+              <div class="sub-item">Colleges</div>
+            </div>
+
+            <!-- nav item - location #2  -->
+            <div class="item" id="item4">
+              <img
+                src="./img/location-active.png"
+                alt=""
+                class="item-icon"
+                id="icon4Active"
+              />
+              <img
+                src="./img/location-inactive.png"
+                alt=""
+                class="item-icon active"
+                id="icon4Inactive"
+              />
+              <div class="item-title" id="item4Title">Location</div>
+              <img
+                src="./img/up-arrow.png"
+                alt=""
+                class="up-arrow"
+                id="upArrow4"
+                onclick="hideSubMenu4()"
+              />
+              <img
+                src="./img/down-arrow.png"
+                alt=""
+                class="down-arrow active"
+                id="downArrow4"
+                onclick="showSubMenu4()"
+              />
+            </div>
+            <div class="sub-items" id="subItems4">
+              <div class="sub-item">Country</div>
+              <div class="sub-item">Province</div>
+              <div class="sub-item">District</div>
+              <div class="sub-item">Local Body Type</div>
+              <div class="sub-item">Local Body</div>
+              <div class="sub-item">VDC</div>
+              <div class="sub-item">Ward Number</div>
+            </div>
+          </div>
+
+          <!-- nav item - location -->
+        </div>
+        <!-- end class="nav-list" -->
+      </div>
+      <!-- end class="nav" -->
+    </section>
+    <!-- end class="left-bar" -->
+
+    <!-- Main body Header -->
+    <section class="header">
+      <div class="menu-icon">
+        <img src="./img/hamburger-menu.png" alt="" />
+      </div>
+      <div class="last-column">
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <img src="./img/search.png" alt="" class="search-icon" />
+        </div>
+        <div class="profile">
+          <img src="./img/profile-picture.png" alt="" class="profile-picture" />
+        </div>
+        <div class="language">EN</div>
+      </div>
+    </section>
+    <main class="main">
+      <div class="page-name">
+        <div class="page-title">Academic</div>
+        <div class="last-column">
+          <div class="back-to-list">Back to list</div>
+          <svg
+            width="1"
+            height="24"
+            viewBox="0 0 1 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="0.5"
+              y1="2.18557e-08"
+              x2="0.499999"
+              y2="24"
+              stroke="#DEE2E6"
+            />
+          </svg>
+          <img src="./img/info.png" alt="" class="info" />
+        </div>
+      </div>
+      <div class="uni-details">Universities Details</div>
+      <div class="search-bar">
+        <form>
+          <img src="./img/search-16.png" alt="" class="search-icon" />
+          <input type="text" placeholder="Search" />
+        </form>
+        <div class="add-btn" onclick="showModal()">
+          <button>
+            <img src="./img/plus.png" alt="" />
+            Add
+          </button>
+        </div>
+      </div>
+
+      <div class="main-body">
+        <table>
+          <tr>
+            <th>
+              <input type="checkbox" />
+            </th>
+            <th>Name</th>
+            <th>Faculties</th>
+            <th>Levels</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </table>
+        <div class="empty-table">
+          <img src="./img/clipboards.png" alt="" />
+          <div class="text">
+            <h5>No University Details</h5>
+            <p>Please add details to show.</p>
+          </div>
+        </div>
+        <div class="pagination">
+          <div class="list">
+            <p>View</p>
+            <select>
+              <option>10</option>
+            </select>
+            <p>per page</p>
+          </div>
+          <div class="button">
+            <p>1-10 of 200</p>
+            <div class="btn-items">
+              <img src="./img/back-arrow.png" alt="" />
+            </div>
+            <div class="btn-items mr-16">
+              <img src="./img/left-arrow.png" alt="" />
+            </div>
+            <div class="page-num">
+              <div class="btn-items active">1</div>
+              <div class="btn-items">2</div>
+              <div class="btn-items">3</div>
+              <div class="btn-items">4</div>
+              <div class="btn-items">...</div>
+              <div class="btn-items">99</div>
+            </div>
+
+            <div class="btn-items ml-16">
+              <img src="./img/right-arrow.png" alt="" />
+            </div>
+            <div class="btn-items">
+              <img src="./img/forward.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- modal -->
+    <div class="form-modal" id="modal">
+      <div class="modal-heading">
+        <h3>Add new university</h3>
+        <button class="close-btn" onclick="hideModal()">
+          <img src="./img/close.png" />
+        </button>
+      </div>
+      <form>
+        <div class="form-item">
+          <label>Name</label><br />
+          <input type="text" />
+        </div>
+        <div class="form-item">
+          <label>Display Name</label><br />
+          <input type="text" placeholder="Placeholder" />
+        </div>
+        <div class="form-item">
+          <label>Description</label><br />
+          <textarea placeholder="Placeholder"></textarea>
+        </div>
+      </form>
+      <div class="buttons">
+        <button class="cancel" onclick="hideModal()">Cancel</button>
+        <button class="add">Add</button>
+      </div>
+    </div>
+    <div class="dim" id="dim" onclick="hideModal()"></div>
+  </body>
+  <script src="../js/script.js"></script>
+</html>
